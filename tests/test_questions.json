@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "question": "What attendance is normally required to appear for an end-semester examination?",
+    "expected_type": "answered",
+    "expected_sections": ["2.1"]
+  },
+  {
+    "id": 2,
+    "question": "What attendance may be allowed for a student with an approved medical exemption?",
+    "expected_type": "answered",
+    "expected_sections": ["2.7"]
+  },
+  {
+    "id": 3,
+    "question": "What attendance requirement applies to a student with a medical exemption?",
+    "expected_type": "conflict",
+    "expected_sections": ["2.1", "2.7"]
+  },
+  {
+    "id": 4,
+    "question": "When must semester fees normally be paid according to the fee policy?",
+    "expected_type": "conflict",
+    "expected_sections": ["6.2", "fee_deadlines"]
+  },
+  {
+    "id": 5,
+    "question": "What CGPA is required to retain the academic merit scholarship?",
+    "expected_type": "conflict",
+    "expected_sections": ["7.2", "7.5"]
+  },
+  {
+    "id": 6,
+    "question": "What happens if I miss an examination because of my sister's wedding?",
+    "expected_type": "not_covered",
+    "expected_sections": []
+  },
+  {
+    "id": 7,
+    "question": "Can I use cryptocurrency to pay my semester fees?",
+    "expected_type": "not_covered",
+    "expected_sections": []
+  },
+  {
+    "id": 8,
+    "question": "Can my friend attend an examination on my behalf?",
+    "expected_type": "not_covered",
+    "expected_sections": []
+  },
+  {
+    "id": 9,
+    "question": "Can I get attendance relaxation because my flight was cancelled?",
+    "expected_type": "not_covered",
+    "expected_sections": []
+  },
+  {
+    "id": 10,
+    "question": "Can my parents stay overnight in my hostel room?",
+    "expected_type": "not_covered",
+    "expected_sections": []
+  }
+]

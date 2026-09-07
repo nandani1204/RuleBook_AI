@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Rulebook AI</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <div class="logo">R</div>
+
+            <div>
+                <h1>Rulebook AI</h1>
+                <p>Ask questions. Verify rules. Detect conflicts.</p>
+            </div>
+        </header>
+
+
+        <main>
+
+            <section class="search-section">
+
+                <label for="question">
+                    Ask the Rulebook
+                </label>
+
+                <div class="search-box">
+
+                    <input
+                        type="text"
+                        id="question"
+                        placeholder="e.g. What is the minimum attendance requirement?"
+                    >
+
+                    <button id="askButton">
+                        Ask
+                    </button>
+
+                </div>
+
+                <div class="examples">
+                    <button onclick="setQuestion('What is the minimum attendance requirement?')">
+                        Attendance
+                    </button>
+
+                    <button onclick="setQuestion('What is the deadline for paying semester fees?')">
+                        Fee Deadline
+                    </button>
+
+                    <button onclick="setQuestion('What is the minimum CGPA required for the scholarship?')">
+                        Scholarship
+                    </button>
+
+                    <button onclick="setQuestion('Can I pay my fees using Bitcoin?')">
+                        Not Covered
+                    </button>
+                </div>
+
+            </section>
+
+
+            <div id="loading" class="loading hidden">
+                <div class="spinner"></div>
+                <span>Analyzing the rulebook...</span>
+            </div>
+
+
+            <section id="result" class="result hidden">
+
+                <div class="status-row">
+
+                    <span id="statusBadge" class="status-badge">
+                        ANSWERED
+                    </span>
+
+                </div>
+
+
+                <div class="answer-card">
+
+                    <h2>Answer</h2>
+
+                    <p id="answer"></p>
+
+                </div>
+
+
+                <div id="reasonCard" class="reason-card">
+
+                    <h3>Analysis</h3>
+
+                    <p id="reason"></p>
+
+                </div>
+
+
+                <div class="sources-section">
+
+                    <div class="sources-header">
+                        <h2>Evidence & Citations</h2>
+
+                        <span id="sourceCount"></span>
+                    </div>
+
+                    <div id="sources"></div>
+
+                </div>
+
+            </section>
+
+
+            <section id="error" class="error-card hidden">
+                <h3>Something went wrong</h3>
+                <p id="errorMessage"></p>
+            </section>
+
+        </main>
+
+
+        <footer>
+            <p>
+                Rulebook AI • Retrieval-Augmented Question Answering
+            </p>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
