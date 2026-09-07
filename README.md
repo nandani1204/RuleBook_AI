@@ -58,72 +58,58 @@ rulebook_project/
 └── README.md
 ```
 
-## ⚙️ Setup
+▶️ How to Run
+1. Clone the repository
+git clone https://github.com/YOUR_USERNAME/rulebook-ai.git
+cd rulebook-ai
+2. Create and activate virtual environment
+python -m venv .venv
 
-### 1. Install dependencies
+Windows:
 
-```bash
+.venv\Scripts\activate
+3. Install dependencies
 pip install -r requirements.txt
-```
+4. Add Gemini API key
 
-### 2. Add Gemini API key
+Create a .env file in the project root:
 
-Create `.env`:
-
-```env
 GEMINI_API_KEY=your_api_key
-```
-
-### 3. Build the vector database
-
-```bash
+5. Build the vector database
 python -m app.ingestion
-```
-
-### 4. Start FastAPI
-
-```bash
+6. Start the FastAPI backend
 uvicorn app.main:app --reload
-```
 
-API:
+Backend:
 
-```text
 http://127.0.0.1:8000
-```
 
-Swagger documentation:
+API documentation:
 
-```text
 http://127.0.0.1:8000/docs
-```
+7. Start the frontend
 
-### 5. Start frontend
+Open a new terminal:
 
-```bash
 cd frontend
 python -m http.server 5500
-```
 
 Open:
 
-```text
 http://localhost:5500
-```
+🧪 Example Questions
 
-## 🧪 Example Questions
+Answered:
 
-**Answered:**
+What is the minimum attendance requirement?
 
-> What is the minimum attendance requirement?
+Conflict:
 
-**Conflict:**
+What is the deadline for paying semester fees?
 
-> What is the deadline for paying semester fees?
+Not Covered:
 
-**Not Covered:**
-
-> Can I pay my fees using Bitcoin?
+Can I pay my fees using Bitcoin?
 
 ## 🔑 Key Features
 
